@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { ReactComponent as Logo320 } from '../../assets/img/logo-320.svg';
 import { ReactComponent as Logo768 } from '../../assets/img/logo-768.svg';
@@ -7,12 +8,26 @@ import { ReactComponent as MenuIco } from '../../assets/img/Menu.svg';
 import { ReactComponent as CloseIco } from '../../assets/img/Close.svg';
 import { ReactComponent as MessagesIco } from '../../assets/img/Messages.svg';
 import { ReactComponent as ShareIco } from '../../assets/img/Share.svg';
+import { ReactComponent as CtrlDropdownIco } from '../../assets/img/ctrlDropdown.svg';
 
 import SearchInput from '../SearchInput';
 import CategoriesDropdown from '../CategoriesDropdown';
 import s from './App.module.scss';
 
+
 function App() {
+  const [isHoverLanguage, setHoverLanguageStatus] = useState(false);
+
+  const LanguageDropdown = () => (
+    <div className={s.ctrlDropdown}>
+      <CtrlDropdownIco />
+      To Be Soon
+    </div>
+  )
+  const onMouseOverHandler = () => {
+    setHoverLanguageStatus(true);
+    console.log(isHoverLanguage, 'hovered')
+  };
   return (
     <section className={s.screen}>
       <header className={s.appHeader}>
@@ -21,7 +36,8 @@ function App() {
         <div className={s.controls}>
           <ul className={s.controlItem}>
             <LangIco />
-            <li className={s.title}>ENG</li>
+            <li className={s.title} onMouseOver={onMouseOverHandler}>ENG</li>
+            {isHoverLanguage && <LanguageDropdown />}
           </ul>
           <button className={classNames(s.middleCtrl, s.controlItem)}>
             <SignIco />
