@@ -7,6 +7,35 @@ $iconWidth: $iconHeight;
   width: 100%;
 }
 
+.dropdownTitle {
+  margin-top: 20px;
+  margin-bottom: 24px;
+
+   * {
+      text-align: center;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+    
+  }
+
+.categoriesList {
+  > .item {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    height: 70px;
+    margin-bottom: 21px;
+    line-height: 65px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
 .input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
@@ -20,8 +49,52 @@ $iconWidth: $iconHeight;
   border-radius: 0 14px 14px 0;
 }
 
-@media only screen and (min-width: 71600px) {
+
+@media only screen and (min-width: 768px) {
+  .categoriesList {
+    display: flex;
+    flex-wrap: wrap;
+    
+    > .item {
+      margin: 15px;
+      padding-right: 50px;
+      padding-left: 50px;
+      line-height: 65px;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .dropdownTitle {
+   * {
+      text-align: left;
+      text-transform: none;
+    }
+
+    h3 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.12rem;
+    }
+    
+  }
+}
+
+@media only screen and (min-width: 1600px) {
   .dropdownComponent {
     width: 30%;
+    min-width: fit-content;
+    margin-bottom: 0;
+  }
+
+  .menuOpen {
+    position: absolute;
+    bottom: 0;
+    left: 3vw;
   }
 }

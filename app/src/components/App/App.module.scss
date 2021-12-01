@@ -44,11 +44,11 @@
     }
 
     .main {
-      width: 90%;
-      height: calc(90vh - 50px);
+      width: 95%;
+      min-height: calc(90vh - 50px);
       display: flex;
       flex-direction: column;
-      align-items:center;
+      align-items:stretch;
       justify-content:center;
       margin: 0 auto;
     }
@@ -99,10 +99,12 @@
   }
 }
 
-
-
 @media only screen and (min-width: 1024px) {
   .screen {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../../assets/img/bg/bg-1200.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     .main {
       height: 90vh;
     }
@@ -118,6 +120,40 @@
 
 @media only screen and (min-width: 1600px) {
   .screen {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../../assets/img/bg/bg-1500.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .appHeader {
+      .controls {
+        .controlItem {
+          display: flex;
+          align-items: center;
+        }
+        .title {
+          display: block;
+          color: #fff;
+          margin-left: 14px;
+        }
+        .middleCtrl {
+          margin: 0 33px;
+        }
+      }
+    }
+
+    .main {
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 11%;
+    }
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .screen {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../../assets/img/bg/bg-1860.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     .appHeader {
       .controls {
         .controlItem {
@@ -139,7 +175,4 @@
       flex-direction: row;
     }
   }
-}
-@media only screen and (min-width: 1920px) {
-  
 }
