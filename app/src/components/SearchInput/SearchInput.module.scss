@@ -1,0 +1,28 @@
+$iconHeight: 30px;
+$iconWidth: $iconHeight;
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 25px 0 25px 30px;
+  border-radius: 14px 0 0 14px;
+}
+
+.searchIcon {
+  padding: 16px 30px 16px 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0 14px 14px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchInput {
+    width: 70%;
+    margin-right: 3%;
+  }
+}
