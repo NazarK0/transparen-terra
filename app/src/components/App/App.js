@@ -19,18 +19,18 @@ function App() {
         <Logo320 className={s.logo320}/>
         <Logo768 className={s.logo768}/>
         <div className={s.controls}>
-          <ul>
+          <ul className={s.controlItem}>
             <LangIco />
             <li className={s.title}>ENG</li>
           </ul>
-          <button className={s.middleCtrl}>
+          <button className={classNames(s.middleCtrl, s.controlItem)}>
             <SignIco />
-            <span className={classNames(s.title, s.middleTitle)}>SIGN IN</span>
+            <span className={s.title}>SIGN IN</span>
           </button>
           <button className={s.closeBtn}>
             <CloseIco />
           </button>
-          <ul className={s.menuBtn}>
+          <ul className={classNames(s.menuBtn, s.controlItem)}>
             <MenuIco />
             <li className={s.title}>MENU</li>
           </ul>

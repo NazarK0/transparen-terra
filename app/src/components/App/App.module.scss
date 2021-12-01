@@ -96,14 +96,20 @@
         }
       }
     }
-    .main {
-      flex-direction: row;
-    }
   }
 }
 
+
+
 @media only screen and (min-width: 1024px) {
-  
+  .screen {
+    .main {
+      height: 90vh;
+    }
+    .bottomBar {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -111,7 +117,28 @@
 }
 
 @media only screen and (min-width: 1600px) {
-  
+  .screen {
+    .appHeader {
+      .controls {
+        .controlItem {
+          display: flex;
+          align-items: center;
+        }
+        .title {
+          display: block;
+          color: #fff;
+          margin-left: 14px;
+        }
+        .middleCtrl {
+          margin: 0 33px;
+        }
+      }
+    }
+
+    .main {
+      flex-direction: row;
+    }
+  }
 }
 @media only screen and (min-width: 1920px) {
   
