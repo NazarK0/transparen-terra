@@ -6,5 +6,6 @@ EXPOSE ${PORT}
 WORKDIR /app
 COPY app/package.json .
 RUN yarn
+RUN npx browserslist@latest --update-db
 COPY app/ .
-RUN yarn start --host=0.0.0.0
+CMD yarn start --host=0.0.0.0

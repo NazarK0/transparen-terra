@@ -1,5 +1,7 @@
 dev: 
-	docker build -t transparnterra:dev --force-rm . 
-	docker run -p 80:80 -v /home/nazar91/Projects/freelance/TransparenTerra/app:/app -v /app/node_modules --rm —name transparnterra transparnterra:dev
+	docker build -t transparnterra:dev --force-rm .
+	docker run -p 8080:80 -v $(PWD)/app:/app --rm --name "transparnterra" transparnterra:dev
+app-console:
+	docker exec -it transparnterra bash
 stop: 
-	docker stop
+	docker stop transparnterra
