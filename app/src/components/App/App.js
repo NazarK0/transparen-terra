@@ -40,7 +40,7 @@ function App() {
         <SearchInput />
         <CategoriesDropdown />
       </main>
-      <footer className={s.footer}>
+      <footer className={s.bottomBar}>
         <button>
           < MessagesIco />
         </button>
