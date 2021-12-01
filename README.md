@@ -8,7 +8,5 @@
 Также используется утилита make для упрощения запуска
 
 ## Инструкции для Windows
-[Install Make](http://gnuwin32.sourceforge.net/packages/make.htm)
-[Install Docker](https://docs.docker.com/desktop/windows/install/)
-
-В Линуксе
+* [Install Make](http://gnuwin32.sourceforge.net/packages/make.htm)
+* [Install Docker](https://docs.docker.com/desktop/windows/install/)
