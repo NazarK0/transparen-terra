@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; 
+import { Route, Switch, Redirect } from "react-router-dom";
 import classNames from 'classnames'
 import s from './CategoriesDropdown.module.scss';
 import { ReactComponent as ChevronIcon } from '../../assets/img/Chevron.svg';
@@ -42,7 +43,13 @@ function CategoriesDropdown() {
           {!isCategoriesOpened && <ChevronIcon />}
         </button>
       </div>
-      {isCategoriesOpened && <CategoriesList />}
+      {isCategoriesOpened && (
+        <Switch>
+          <Route exact path="/" component={CategoriesList} />
+          <Route path="/category" render={() => <Category />)} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      )}
     </div>
   );
 }
